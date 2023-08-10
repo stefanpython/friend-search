@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Post.css";
 
 function Post() {
@@ -28,20 +29,28 @@ function Post() {
   return (
     <div className="post-container">
       {users.map((user) => (
-        <div key={user._id} className="user-container">
-          <div className="user-name">
-            {user.firstName} {user.lastName}
-          </div>
+        <Link key={user._id} to={`/user/${user._id}`}>
+          <div key={user._id} className="user-container">
+            <div className="user-image">
+              <img
+                className="post-image"
+                src={`http://localhost:3000/images/${user.image}`}
+                alt="userimage"
+              />
+            </div>
 
-          <div className="user-image">
-            <img
-              src={`http://localhost:3000/images/${user.image}`}
-              alt="userimage"
-            />
-          </div>
+            <hr />
 
-          <div className="user-description">{user.description}</div>
-        </div>
+            <div className="user-name">
+              <span className="posted-by"> Posted by:</span> {user.firstName}{" "}
+              {user.lastName}
+            </div>
+
+            <br />
+
+            <div className="user-description">{user.description}</div>
+          </div>
+        </Link>
       ))}
     </div>
   );
