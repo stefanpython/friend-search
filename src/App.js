@@ -1,11 +1,12 @@
 import "./App.css";
 import Nav from "./components/Nav";
+import Post from "./components/Post";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <h1>Hello world</h1>
+      <Post />
     </div>
   );
 }

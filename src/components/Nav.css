@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #3f535e;
   color: white;
   padding: 10px;
 }
@@ -11,6 +11,7 @@
 /* Styles for the title on the left */
 .navbar-left {
   flex: 1;
+  text-align: left;
 }
 
 /* Styles for the title text */
@@ -26,8 +27,9 @@
 
 /* Styles for the search input */
 .search-bar {
-  width: 100%;
-  padding: 5px;
+  width: 70%;
+  padding: 8px;
+  border-radius: 15px;
 }
 
 /* Styles for the button on the right */
@@ -41,7 +43,9 @@
   padding: 8px 15px;
   background-color: #007bff;
   border: none;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 600;
 }
