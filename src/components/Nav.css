@@ -1,0 +1,47 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* Styles for the title on the left */
+.navbar-left {
+  flex: 1;
+}
+
+/* Styles for the title text */
+.navbar-title {
+  font-size: 20px;
+}
+
+/* Styles for the search bar in the middle */
+.navbar-middle {
+  flex: 2;
+  text-align: center;
+}
+
+/* Styles for the search input */
+.search-bar {
+  width: 100%;
+  padding: 5px;
+}
+
+/* Styles for the button on the right */
+.navbar-right {
+  flex: 1;
+  text-align: right;
+}
+
+/* Styles for the button */
+.nav-button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
