@@ -53,6 +53,9 @@ function SinglePost() {
 
       <br />
 
+      <hr className="single-hr" />
+      <br />
+
       <div className="single-user-description">{user.description}</div>
 
       <button className="back-button" onClick={() => navigate("/")}>

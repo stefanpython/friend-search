@@ -52,7 +52,11 @@ function Post() {
               ? `${user.description.substring(0, 100)}...`
               : user.description}
             {user.description.length > 100 && (
-              <Link key={user._id} to={`/user/${user._id}`}>
+              <Link
+                className="read-more"
+                key={user._id}
+                to={`/user/${user._id}`}
+              >
                 Read more
               </Link>
             )}
@@ -64,5 +68,3 @@ function Post() {
 }
 
 export default Post;
-
-// TODO: keep ratio aspect for photos with smaller size

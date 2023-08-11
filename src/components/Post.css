@@ -11,6 +11,13 @@
   padding: 10px;
   margin-bottom: 20px;
   box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 17px 15px 11px gainsboro;
+}
+
+.user-container:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 
 .user-description {
@@ -24,6 +31,10 @@
 
 .posted-by {
   font-weight: 300;
+}
+
+.read-more {
+  font-size: 19px;
 }
 
 /* Media query for smaller screens */
