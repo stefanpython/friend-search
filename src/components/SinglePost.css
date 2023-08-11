@@ -1,0 +1,33 @@
+.single-user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.single-post-image {
+  max-width: 100%;
+}
+
+.single-user-description {
+  max-width: 68em;
+}
+
+.back-button {
+  padding: 8px 15px;
+  background-color: #8f7952;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 10px;
+}
+
+.single-user-description {
+  line-height: 20px;
+  font-size: 18px;
+}

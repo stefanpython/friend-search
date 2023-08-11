@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./SinglePost";
+import "./SinglePost.css";
+import { useNavigate } from "react-router-dom";
 
 function SinglePost() {
   const { userId } = useParams();
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchUser();
+    // eslint-disable-next-line
   }, []);
 
   const fetchUser = () => {
@@ -51,6 +54,10 @@ function SinglePost() {
       <br />
 
       <div className="single-user-description">{user.description}</div>
+
+      <button className="back-button" onClick={() => navigate("/")}>
+        &#x21b5; Back
+      </button>
     </div>
   );
 }

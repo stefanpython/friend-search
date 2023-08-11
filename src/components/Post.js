@@ -29,31 +29,40 @@ function Post() {
   return (
     <div className="post-container">
       {users.map((user) => (
-        <Link key={user._id} to={`/user/${user._id}`}>
-          <div key={user._id} className="user-container">
-            <div className="user-image">
-              <img
-                className="post-image"
-                src={`http://localhost:3000/images/${user.image}`}
-                alt="userimage"
-              />
-            </div>
-
-            <hr />
-
-            <div className="user-name">
-              <span className="posted-by"> Posted by:</span> {user.firstName}{" "}
-              {user.lastName}
-            </div>
-
-            <br />
-
-            <div className="user-description">{user.description}</div>
+        <div key={user._id} className="user-container">
+          <div className="user-image">
+            <img
+              className="post-image"
+              src={`http://localhost:3000/images/${user.image}`}
+              alt="userimage"
+            />
           </div>
-        </Link>
+
+          <hr />
+
+          <div className="user-name">
+            <span className="posted-by"> Posted by:</span> {user.firstName}{" "}
+            {user.lastName}
+          </div>
+
+          <br />
+
+          <div className="user-description">
+            {user.description.length > 100
+              ? `${user.description.substring(0, 100)}...`
+              : user.description}
+            {user.description.length > 100 && (
+              <Link key={user._id} to={`/user/${user._id}`}>
+                Read more
+              </Link>
+            )}
+          </div>
+        </div>
       ))}
     </div>
   );
 }
 
 export default Post;
+
+// TODO: keep ratio aspect for photos with smaller size
