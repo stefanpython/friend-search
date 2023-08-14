@@ -48,9 +48,11 @@ function Post() {
           <br />
 
           <div className="user-description">
-            {user.description.length > 100
-              ? `${user.description.substring(0, 100)}...`
-              : user.description}
+            <span className="text-description">
+              {user.description.length > 100
+                ? `${user.description.substring(0, 100)}...`
+                : user.description}
+            </span>
             {user.description.length > 100 && (
               <Link
                 className="read-more"

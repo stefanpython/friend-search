@@ -13,6 +13,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 17px 15px 11px gainsboro;
+  max-width: 27em;
 }
 
 .user-container:hover {
@@ -23,6 +24,7 @@
 .user-description {
   margin-top: 5px;
   font-size: 16px;
+  word-wrap: break-word;
 }
 
 .post-image {
@@ -41,6 +43,7 @@
 @media (max-width: 768px) {
   .user-container {
     flex: 0 0 calc(50% - 20px);
+    max-width: 22em;
   }
   .post-image {
     max-width: 325px;

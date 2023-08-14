@@ -12,6 +12,7 @@
 
 .single-user-description {
   max-width: 68em;
+  word-wrap: break-word;
 }
 
 .back-button {
@@ -35,4 +36,10 @@
 .single-hr {
   max-width: 50em;
   min-width: 20em;
+}
+
+@media (max-width: 768px) {
+  .single-user-description {
+    max-width: 20em;
+  }
 }
