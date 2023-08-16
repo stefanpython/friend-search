@@ -4,14 +4,17 @@ import Post from "./components/Post";
 import SinglePost from "./components/SinglePost";
 import CreatePost from "./components/CreatePost";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <div className="App">
       <HashRouter>
-        <Nav />
+        <Nav setSearchQuery={setSearchQuery} searchQuery={searchQuery} />
         <Routes>
-          <Route path="/" element={<Post />} />
+          <Route path="/" element={<Post searchQuery={searchQuery} />} />
           <Route path="/user/:userId" element={<SinglePost />} />
           <Route path="/create" element={<CreatePost />} />
         </Routes>

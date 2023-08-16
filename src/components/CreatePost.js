@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./CreatePost.css";
 
 function CreatePost() {
@@ -7,6 +8,7 @@ function CreatePost() {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,6 +38,7 @@ function CreatePost() {
         }
       })
       .then((data) => {
+        navigate("/");
         console.log(data);
       })
       .catch((err) => {
@@ -46,9 +49,10 @@ function CreatePost() {
 
   return (
     <div className="form-container">
-      {error && <p className="signup-error">{error}</p>}
+      {error && <p className="create-error">{error}</p>}
 
       <form onSubmit={handleSubmit} className="create-form">
+        <h2>Share your experience</h2>
         <input
           type="text"
           placeholder="First Name"
@@ -76,15 +80,22 @@ function CreatePost() {
           onChange={(e) => setDescription(e.target.value)}
         />
 
-        <input
-          type="file"
-          name="image"
-          id="image"
-          accept="image/*"
-          onChange={(e) => setImage(e.target.files[0])}
-        />
+        <label htmlFor="image">
+          Upload image
+          <br />
+          <br />
+          <input
+            type="file"
+            name="image"
+            id="image"
+            accept="image/*"
+            onChange={(e) => setImage(e.target.files[0])}
+          />
+        </label>
 
-        <button type="submit">Add</button>
+        <button className="create-button" type="submit">
+          Add
+        </button>
       </form>
     </div>
   );
