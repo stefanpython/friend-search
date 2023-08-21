@@ -1,4 +1,4 @@
-`# Friend Search App
+# Friend Search App
 
 Friend Search is a web application that allows users to search for and view posts shared by other users. Users can also create their own posts to share their thoughts and experiences.
 
