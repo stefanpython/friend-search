@@ -63,7 +63,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 5.  Submit a pull request.
 
 Please ensure your code follows the project's coding standards and includes appropriate tests if necessary.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://chat.openai.com/c/LICENSE) file for details
